@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-        marginBottom:0
+        bottom:0
       },
   }));
 
@@ -48,24 +48,27 @@ export default function Home() {
     const classes = useStyles();
 
     return (
+        <div>
         <div className={classes.root}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={12}>
+            <Grid item xs={12} lg={12} >
               <Paper className={classes.paper}>
-                <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                    <DehazeIcon/>
-                </Button>
-                <Menu
-                    id="simple-menu"
-                    anchorEl={anchorEl}
-                    keepMounted
-                    open={Boolean(anchorEl)}
-                    onClose={handleClose}
-                >
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
-                </Menu>
+                  <Hidden smUp>
+                        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                            <DehazeIcon/>
+                        </Button>
+                        <Menu
+                            id="simple-menu"
+                            anchorEl={anchorEl}
+                            keepMounted
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose}>Profile</MenuItem>
+                            <MenuItem onClick={handleClose}>My account</MenuItem>
+                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        </Menu>
+                </Hidden>
               </Paper>
             </Grid>
             <Grid item xs={12} lg={12}>
@@ -76,14 +79,18 @@ export default function Home() {
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6}>
               <Paper className={classes.card}>Product Card</Paper>
-            </Grid>
-            <Hidden smDown>
-            <Grid item  xs={12} sm={12} lg={12}>
-              <Paper className={classes.footer}>Footer</Paper>
-            </Grid>
-            </Hidden>
+            </Grid>            
           </Grid>
         </div>
+        <div style={{position: "fixed",bottom: 0, width:"100%"}} >
+        <Hidden smDown>
+            <Grid item  xs={12} sm={12} lg={12} >
+              <Paper className={classes.footer}>Footer</Paper>
+            </Grid>
+        </Hidden>
+        </div>
+        </div>
+        
       );
 }
 
