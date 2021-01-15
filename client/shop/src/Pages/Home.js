@@ -7,15 +7,25 @@ import DehazeIcon from '@material-ui/icons/Dehaze';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import ProdCards from './ProdCards';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      width:"95%",
+      margin:"auto"
     },
+    ft: {
+        position: "fixed",
+        bottom: 0, 
+        width:"95%",
+        left: "50%",
+        transform: "translateX(-50%)"
+      },
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
-      color: theme.palette.text.secondary,
+      color: theme.palette.text.secondary,            
     },
     banner: {
         padding: theme.spacing(2),
@@ -50,7 +60,7 @@ export default function Home() {
     return (
         <div>
         <div className={classes.root}>
-          <Grid container spacing={3}>
+          <Grid container spacing={3} justify="center">
             <Grid item xs={12} lg={12} >
               <Paper className={classes.paper}>
                   <Hidden smUp>
@@ -71,18 +81,10 @@ export default function Home() {
                 </Hidden>
               </Paper>
             </Grid>
-            <Grid item xs={12} lg={12}>
-              <Paper className={classes.banner}>Banner</Paper>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6}>
-              <Paper className={classes.card}>Product Card</Paper>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6}>
-              <Paper className={classes.card}>Product Card</Paper>
-            </Grid>            
+            <ProdCards></ProdCards>
           </Grid>
         </div>
-        <div style={{position: "fixed",bottom: 0, width:"100%"}} >
+        <div className={classes.ft} >
         <Hidden smDown>
             <Grid item  xs={12} sm={12} lg={12} >
               <Paper className={classes.footer}>Footer</Paper>
