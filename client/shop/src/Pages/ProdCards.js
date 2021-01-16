@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import {makeStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -16,9 +17,13 @@ const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 345,
       },
-    contn: {
-    textAlign: "center",
-    },
+    banner: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        height:240,
+        color: theme.palette.text.secondary,
+      }
+    ,
     card: {
         padding: theme.spacing(2),
         // textAlign: 'center',
@@ -33,7 +38,7 @@ export default function ProdCards() {
     return (
         <>
             <Grid item xs={12} lg={12} align="center">
-              {/* <Paper className={classes.banner}>Banner</Paper> */}
+              <Paper className={classes.banner}>Banner</Paper>
             </Grid>
 
             {Info.data.map((d)=>{
