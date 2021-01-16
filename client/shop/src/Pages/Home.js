@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -31,12 +31,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-      },
-      card: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-      },
+      },      
       footer: {
         padding: theme.spacing(2),
         textAlign: 'center',
@@ -60,7 +55,9 @@ export default function Home() {
     return (
         <div>
         <div className={classes.root}>
-          <Grid container spacing={3} justify="center">
+          <Grid container spacing={3} direction="row"
+  justify="center"
+  alignItems="center">
             <Grid item xs={12} lg={12} >
               <Paper className={classes.paper}>
                   <Hidden smUp>
