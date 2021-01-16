@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
     paper: {
       padding: theme.spacing(2),
       textAlign: "right",
-      color: theme.palette.text.secondary,            
+      color: theme.palette.text.secondary,   
+      overflow: "hidden",         
     },      
       footer: {
         padding: theme.spacing(2),
@@ -57,10 +58,10 @@ export default function Home() {
             justify="center"
             alignItems="center">
             <Grid item xs={12} lg={12} >
-              <Paper className={classes.paper}>
+              <Paper className={classes.paper} >
               <span><img src={tree} alt='logo' width="152" height="auto" align="left"></img>
               </span>
-                 <Hidden smDown>
+                 <Hidden xsDown>
                         <Button color="primary">Main</Button>
                         <Button color="primary">Page two</Button>
                         <Button color="primary">Page tatu</Button>
