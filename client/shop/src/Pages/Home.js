@@ -10,6 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import ProdCards from './ProdCards';
 import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import tree from "../resources/images/tree540.png";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -51,12 +52,14 @@ export default function Home() {
 
     return (
         <div>
-        <div className={classes.root}>
+        <div className={classes.root}>           
           <Grid container spacing={3} direction="row"
             justify="center"
             alignItems="center">
             <Grid item xs={12} lg={12} >
               <Paper className={classes.paper}>
+              <span><img src={tree} alt='logo' width="152" height="auto" align="left"></img>
+              </span>
                  <Hidden smDown>
                         <Button color="primary">Main</Button>
                         <Button color="primary">Page two</Button>
