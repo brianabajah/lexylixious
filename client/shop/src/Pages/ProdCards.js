@@ -11,6 +11,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Info  from '../resources/Info.json';
+import fhands from "../resources/images/fhands.jpg";
+import ddits from "../resources/images/d-dits.jpg";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,7 +55,7 @@ export default function ProdCards() {
                             component="img"
                             alt={d.title}
                             height="140"
-                            image="https://drive.google.com/file/d/19BanxHLsxUI8MlPX9mg2sJo1c58DvAIP/view?usp=sharing"
+                            image={d.img==="fhands"?fhands:ddits}
                             title={d.title}
                           />
                           <CardContent>

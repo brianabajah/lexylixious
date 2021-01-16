@@ -8,6 +8,8 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ProdCards from './ProdCards';
+import IconButton from '@material-ui/core/IconButton';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,14 +26,9 @@ const useStyles = makeStyles((theme) => ({
       },
     paper: {
       padding: theme.spacing(2),
-      textAlign: 'center',
+      textAlign: "right",
       color: theme.palette.text.secondary,            
-    },
-    banner: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-      },      
+    },      
       footer: {
         padding: theme.spacing(2),
         textAlign: 'center',
@@ -56,14 +53,19 @@ export default function Home() {
         <div>
         <div className={classes.root}>
           <Grid container spacing={3} direction="row"
-  justify="center"
-  alignItems="center">
+            justify="center"
+            alignItems="center">
             <Grid item xs={12} lg={12} >
               <Paper className={classes.paper}>
-                  <Hidden smUp>
-                        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                            <DehazeIcon/>
-                        </Button>
+                 <Hidden smDown>
+                        <Button color="primary">Main</Button>
+                        <Button color="primary">Page two</Button>
+                        <Button color="primary">Page tatu</Button>
+                        <IconButton color="primary" aria-label="add to shopping cart"><AddShoppingCartIcon />    </IconButton>
+                 </Hidden>
+
+                  <Hidden smUp>                        
+                        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}><DehazeIcon/></Button>
                         <Menu
                             id="simple-menu"
                             anchorEl={anchorEl}
@@ -71,14 +73,15 @@ export default function Home() {
                             open={Boolean(anchorEl)}
                             onClose={handleClose}
                         >
-                            <MenuItem onClick={handleClose}>Profile</MenuItem>
-                            <MenuItem onClick={handleClose}>My account</MenuItem>
-                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                            <MenuItem onClick={handleClose}>Main</MenuItem>
+                            <MenuItem onClick={handleClose}>Page two</MenuItem>
+                            <MenuItem onClick={handleClose}>Page tatu</MenuItem>
+                            <MenuItem onClick={handleClose}><AddShoppingCartIcon /></MenuItem>
                         </Menu>
                 </Hidden>
               </Paper>
             </Grid>
-            <ProdCards></ProdCards>
+            <ProdCards ></ProdCards>
           </Grid>
         </div>
         <div className={classes.ft} >
