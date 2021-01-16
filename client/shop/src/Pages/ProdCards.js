@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 345,
       },
+    contn: {
+    textAlign: "center",
+    },
     card: {
         padding: theme.spacing(2),
         // textAlign: 'center',
@@ -29,7 +32,7 @@ export default function ProdCards() {
 
     return (
         <>
-            <Grid item xs={12} lg={12}>
+            <Grid item xs={12} lg={12} align="center">
               {/* <Paper className={classes.banner}>Banner</Paper> */}
             </Grid>
 
@@ -38,7 +41,7 @@ export default function ProdCards() {
                         // <Grid item xs={12} sm={12} md={6} lg={6}>
                         // <Paper className={classes.card}>Product Card</Paper>
                         // </Grid>
-                        <Grid item xs={12} sm={6} md={4} lg={4}>
+                        <Grid item xs={12} sm={6} md={4} lg={4} align="center">
                         <Card className={classes.root}>
                         <CardActionArea className={classes.card}>
                           <CardMedia
