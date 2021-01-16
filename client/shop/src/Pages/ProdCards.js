@@ -48,7 +48,7 @@ export default function ProdCards() {
                         // <Grid item xs={12} sm={12} md={6} lg={6}>
                         // <Paper className={classes.card}>Product Card</Paper>
                         // </Grid>
-                        <Grid item xs={12} sm={6} md={4} lg={4} align="center">
+                        <Grid item xs={12} sm={6} md={4} lg={4} align="center" justify="space-between">
                         <Card className={classes.root}>
                         <CardActionArea className={classes.card}>
                           <CardMedia

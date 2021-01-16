@@ -11,6 +11,14 @@ import ProdCards from './ProdCards';
 import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import tree from "../resources/images/tree540.png";
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import Slide from '@material-ui/core/Slide';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import AppBar from '@material-ui/core/AppBar';
+// import Toolbar from '@material-ui/core/Toolbar';
+// import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
       textAlign: "right",
       color: theme.palette.text.secondary,   
-      overflow: "hidden",         
+      overflow: "hidden",     
+        
     },      
       footer: {
         padding: theme.spacing(2),
@@ -39,8 +48,17 @@ const useStyles = makeStyles((theme) => ({
       },
   }));
 
+  function HideOnScroll(props) {
+    const { children} = props;
+    const trigger = useScrollTrigger();  
+    return (
+      <Slide appear={false} direction="down" in={!trigger}>
+        {children}
+      </Slide>
+    );
+  }
 
-export default function Home() {
+export default function Home(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
@@ -52,11 +70,15 @@ export default function Home() {
     const classes = useStyles();
 
     return (
-        <div>
-        <div className={classes.root}>           
+        // <div>
+        <div className={classes.root}> 
+               
           <Grid container spacing={3} direction="row"
             justify="center"
             alignItems="center">
+
+        <HideOnScroll {...props}>
+            <AppBar>     
             <Grid item xs={12} lg={12} >
               <Paper className={classes.paper} >
               <span><img src={tree} alt='logo' width="152" height="auto" align="left"></img>
@@ -85,17 +107,32 @@ export default function Home() {
                 </Hidden>
               </Paper>
             </Grid>
+            </AppBar>
+        </HideOnScroll> 
+        <Grid item xs={12} lg={12} >
+              <Paper className={classes.paper} >
+              <span><img src={tree} alt='logo' width="152" height="auto" align="left"></img>
+              </span>                 
+              </Paper>
+            </Grid>
             <ProdCards ></ProdCards>
-          </Grid>
-        </div>
-        <div className={classes.ft} >
-        <Hidden smDown>
+          
+          <Hidden smDown>
             <Grid item  xs={12} sm={12} lg={12} >
-              <Paper className={classes.footer}>Footer</Paper>
+              <Paper className={classes.footer}>
+              <IconButton color="secondary" aria-label="youtube"><YouTubeIcon/></IconButton>
+              <IconButton color="secondary" aria-label="instagram"><InstagramIcon/></IconButton>
+              <IconButton color="primary" aria-label="facebook"><FacebookIcon/></IconButton>
+                  </Paper>
             </Grid>
         </Hidden>
+        </Grid>
         </div>
-        </div>
+
+        // {/* <div className={classes.ft} >
+        
+        // </div>
+        // </div> */}
         
       );
 }
