@@ -74,7 +74,7 @@ export default function Home(props) {
         <div className={classes.root}> 
                
           <Grid container spacing={3} direction="row"
-            justify="center"
+            justify="space-between" 
             alignItems="center">
 
         <HideOnScroll {...props}>
