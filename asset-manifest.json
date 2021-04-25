@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/lexylixious/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/lexylixious/static/js/main.82b8be2b.chunk.js",
+    "main.js.map": "/lexylixious/static/js/main.82b8be2b.chunk.js.map",
+    "runtime-main.js": "/lexylixious/static/js/runtime-main.bf66e6ef.js",
+    "runtime-main.js.map": "/lexylixious/static/js/runtime-main.bf66e6ef.js.map",
+    "static/js/2.ebcdf953.chunk.js": "/lexylixious/static/js/2.ebcdf953.chunk.js",
+    "static/js/2.ebcdf953.chunk.js.map": "/lexylixious/static/js/2.ebcdf953.chunk.js.map",
+    "static/js/3.9275e946.chunk.js": "/lexylixious/static/js/3.9275e946.chunk.js",
+    "static/js/3.9275e946.chunk.js.map": "/lexylixious/static/js/3.9275e946.chunk.js.map",
+    "index.html": "/lexylixious/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/lexylixious/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.ebcdf953.chunk.js.LICENSE.txt": "/lexylixious/static/js/2.ebcdf953.chunk.js.LICENSE.txt",
+    "static/media/d-dits.ab04fc95.jpg": "/lexylixious/static/media/d-dits.ab04fc95.jpg",
+    "static/media/fhands.e3a1f5cd.jpg": "/lexylixious/static/media/fhands.e3a1f5cd.jpg",
+    "static/media/tree540.520e2025.png": "/lexylixious/static/media/tree540.520e2025.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf66e6ef.js",
+    "static/js/2.ebcdf953.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.82b8be2b.chunk.js"
+  ]
+}
